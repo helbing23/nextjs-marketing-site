@@ -25,6 +25,7 @@ export function AnimatedCounter({
 
   useEffect(() => {
     if (!inView) return;
+    startTime.current = null;
 
     const animate = (timestamp: number) => {
       if (!startTime.current) startTime.current = timestamp;

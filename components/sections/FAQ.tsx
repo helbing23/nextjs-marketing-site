@@ -38,31 +38,31 @@ export const FAQS = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-[var(--color-bg-secondary)] py-20 md:py-28">
+    <section id="faq" className="bg-bg-secondary py-20 md:py-28">
       {/* JSON-LD is injected in the page file via generateMetadata or a script tag */}
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             FAQ
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Common questions
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl divide-y divide-[var(--color-border)]">
+        <div className="mx-auto mt-12 max-w-3xl divide-y divide-border">
           {FAQS.map((faq) => (
             <details key={faq.q} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-base font-medium text-[var(--color-text-primary)]">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-base font-medium text-text-primary">
                 <span>{faq.q}</span>
-                <span className="mt-0.5 shrink-0 text-[var(--color-text-tertiary)] transition-transform group-open:rotate-45">
+                <span className="mt-0.5 shrink-0 text-text-tertiary transition-transform group-open:rotate-45">
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 {faq.a}
               </p>
             </details>

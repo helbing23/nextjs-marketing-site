@@ -1,0 +1,37 @@
+---
+title: "Welcome to Your New Marketing Site"
+description: "A walkthrough of how this template works and how to customise it for your product."
+date: "2026-01-15"
+readingTime: "6 min read"
+---
+
+## Getting started
+
+This template ships with everything you need to take a marketing site from zero to production in a single afternoon. The design system lives entirely in `app/globals.css` — every colour, spacing token, and typography scale is a CSS custom property, so you change the look of the entire site by editing fewer than ten lines.
+
+## The [CHANGE] system
+
+Every placeholder in this template is marked with a `[CHANGE]` comment. Run the following command in your terminal to see everything that needs your attention before launch:
+
+```bash
+grep -r "\[CHANGE\]" app components lib --include="*.tsx" --include="*.ts"
+```
+
+Start with `lib/constants.ts` — updating `SITE_CONFIG` (name, URL, tagline) propagates those values across every page automatically via the SEO factory in `lib/seo.ts`.
+
+## Writing blog posts
+
+Drop an `.mdx` file into `content/blog/` with the following frontmatter and it will appear on the `/blog` listing page automatically:
+
+```mdx
+---
+title: "My Post Title"
+description: "One sentence summary for SEO and the listing card."
+date: "2026-02-01"
+readingTime: "4 min read"
+---
+
+Your content here...
+```
+
+The blog system uses `gray-matter` to parse frontmatter and `next-mdx-remote` to render MDX on the server. No rebuild required — posts are picked up at runtime.

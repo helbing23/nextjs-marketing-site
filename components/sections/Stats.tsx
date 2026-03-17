@@ -11,19 +11,19 @@ const STATS = [
 
 export function Stats() {
   return (
-    <section className="border-y border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
+    <section className="border-y border-border bg-bg-secondary">
       <Container>
-        <dl className="grid grid-cols-2 divide-x divide-y divide-[var(--color-border)] md:grid-cols-4 md:divide-y-0">
-          {STATS.map((stat, i) => (
+        <dl className="grid grid-cols-2 divide-x divide-y divide-border md:grid-cols-4 md:divide-y-0">
+          {STATS.map((stat) => (
             <div
-              key={i}
+              key={stat.label}
               className="flex flex-col items-center justify-center px-6 py-10 text-center"
             >
-              <dt className="order-2 mt-2 text-sm text-[var(--color-text-secondary)]">
+              <dt className="order-2 mt-2 text-sm text-text-secondary">
                 {stat.label}
               </dt>
               <dd
-                className="order-1 font-heading text-4xl font-semibold text-[var(--color-text-primary)]"
+                className="order-1 font-heading text-4xl font-semibold text-text-primary"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 <AnimatedCounter

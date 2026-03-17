@@ -7,7 +7,7 @@ import { COMPETITORS, SITE_CONFIG } from "@/lib/constants";
 import { Check, X } from "lucide-react";
 
 export async function generateStaticParams() {
-  return COMPETITORS.map((competitor) => ({ competitor }));
+  return Object.keys(COMPARISON_DATA).map((competitor) => ({ competitor }));
 }
 
 // [CHANGE] Add real comparison data per competitor
@@ -64,7 +64,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { competitor } = await params;
   const data = COMPARISON_DATA[competitor];
-  if (!data) return {};
+  if (!data) notFound();
 
   return createMetadata({
     title: `${SITE_CONFIG.name} vs ${data.name}`,
@@ -80,62 +80,62 @@ export default async function ComparePage({
 }) {
   const { competitor } = await params;
   const data = COMPARISON_DATA[competitor];
-  if (!data) notFound();
+  if (!data) return notFound();
 
   return (
-    <div className="bg-[var(--color-bg-primary)]">
+    <div className="bg-bg-primary">
       {/* Hero */}
       <section className="py-20">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
               Comparison
             </p>
             <h1
-              className="mt-3 font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+              className="mt-3 font-heading text-h2 font-semibold text-text-primary"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               {SITE_CONFIG.name} vs {data.name}
             </h1>
-            <p className="mt-4 text-[var(--color-text-secondary)]">
+            <p className="mt-4 text-text-secondary">
               {data.tagline}
             </p>
           </div>
 
           {/* Comparison table */}
-          <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-xl border border-[var(--color-border)]">
+          <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-xl border border-border">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
-                  <th className="px-6 py-4 text-left font-medium text-[var(--color-text-tertiary)]">
+                <tr className="border-b border-border bg-bg-secondary">
+                  <th className="px-6 py-4 text-left font-medium text-text-tertiary">
                     Feature
                   </th>
-                  <th className="px-6 py-4 text-center font-semibold text-[var(--color-accent)]">
+                  <th className="px-6 py-4 text-center font-semibold text-accent">
                     {SITE_CONFIG.name}
                   </th>
-                  <th className="px-6 py-4 text-center font-medium text-[var(--color-text-secondary)]">
+                  <th className="px-6 py-4 text-center font-medium text-text-secondary">
                     {data.name}
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[var(--color-border)] bg-[var(--color-bg-primary)]">
+              <tbody className="divide-y divide-border bg-bg-primary">
                 {data.features.map((row) => (
                   <tr key={row.label}>
-                    <td className="px-6 py-4 text-[var(--color-text-primary)]">
+                    <td className="px-6 py-4 text-text-primary">
                       {row.label}
                     </td>
                     <td className="px-6 py-4 text-center">
                       {row.us ? (
-                        <Check className="mx-auto h-4 w-4 text-[var(--color-success)]" />
+                        <Check className="mx-auto h-4 w-4 text-success" />
                       ) : (
-                        <X className="mx-auto h-4 w-4 text-[var(--color-error)]" />
+                        <X className="mx-auto h-4 w-4 text-error" />
                       )}
                     </td>
                     <td className="px-6 py-4 text-center">
                       {row.them ? (
-                        <Check className="mx-auto h-4 w-4 text-[var(--color-success)]" />
+                        <Check className="mx-auto h-4 w-4 text-success" />
                       ) : (
-                        <X className="mx-auto h-4 w-4 text-[var(--color-error)]" />
+                        <X className="mx-auto h-4 w-4 text-error" />
                       )}
                     </td>
                   </tr>
@@ -148,7 +148,7 @@ export default async function ComparePage({
           <div className="mt-12 text-center">
             <Link
               href="/#pricing"
-              className="inline-flex rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent-hover)]"
+              className="inline-flex rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
             >
               Get {SITE_CONFIG.name} →
             </Link>

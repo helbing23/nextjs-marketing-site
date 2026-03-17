@@ -50,21 +50,21 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="bg-[var(--color-bg-primary)] py-20 md:py-28">
+    <section id="features" className="bg-bg-primary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             {/* [CHANGE] Section label */}
             Features
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] Headline */}
             Everything you need. Nothing you don&apos;t.
           </h2>
-          <p className="mt-4 text-pretty text-[var(--color-text-secondary)]">
+          <p className="mt-4 text-pretty text-text-secondary">
             {/* [CHANGE] Description */}
             Built with the opinions of a senior engineer who&apos;s shipped
             dozens of marketing sites. Every decision is intentional.
@@ -77,18 +77,18 @@ export function Features() {
             return (
               <div
                 key={feature.title}
-                className="group flex flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-6 transition-colors hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-bg-tertiary)]"
+                className="group flex flex-col rounded-xl border border-border bg-bg-secondary p-6 transition-colors hover:border-accent/40 hover:bg-bg-tertiary"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent-muted)] transition-colors group-hover:bg-[var(--color-accent-muted)]">
-                  <Icon className="h-5 w-5 text-[var(--color-accent)]" />
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-muted transition-colors group-hover:bg-accent-muted">
+                  <Icon className="h-5 w-5 text-accent" />
                 </div>
                 <h3
-                  className="font-heading text-base font-semibold text-[var(--color-text-primary)]"
+                  className="font-heading text-base font-semibold text-text-primary"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {feature.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                   {feature.description}
                 </p>
               </div>

@@ -23,21 +23,21 @@ const PAINS = [
 
 export function PainPoints() {
   return (
-    <section className="bg-[var(--color-bg-primary)] py-20 md:py-28">
+    <section className="bg-bg-primary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           {/* [CHANGE] Section label */}
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             The problem
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] Headline */}
             Most teams waste their first sprint on setup
           </h2>
-          <p className="mt-4 text-pretty text-[var(--color-text-secondary)]">
+          <p className="mt-4 text-pretty text-text-secondary">
             {/* [CHANGE] Description */}
             Every new project starts the same way — choosing libraries,
             configuring tools, debugging TypeScript, writing the same Header and
@@ -46,22 +46,22 @@ export function PainPoints() {
         </div>
 
         <div className="mx-auto mt-16 grid max-w-3xl gap-4">
-          {PAINS.map((item, i) => (
+          {PAINS.map((item) => (
             <div
-              key={i}
-              className="grid gap-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-6 sm:grid-cols-2"
+              key={item.problem}
+              className="grid gap-4 rounded-xl border border-border bg-bg-secondary p-6 sm:grid-cols-2"
             >
               {/* Pain */}
               <div className="flex gap-3">
-                <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-error)]" />
-                <p className="text-sm text-[var(--color-text-secondary)] line-through decoration-[var(--color-error)]/40">
+                <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-error" />
+                <p className="text-sm text-text-secondary line-through decoration-error/40">
                   {item.problem}
                 </p>
               </div>
               {/* Solution */}
               <div className="flex gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-success)]" />
-                <p className="text-sm font-medium text-[var(--color-text-primary)]">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success" />
+                <p className="text-sm font-medium text-text-primary">
                   {item.solution}
                 </p>
               </div>

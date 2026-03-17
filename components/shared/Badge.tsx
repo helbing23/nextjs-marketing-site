@@ -9,15 +9,15 @@ interface BadgeProps {
 export function Badge({ children, className, variant = "accent" }: BadgeProps) {
   const variants = {
     accent:
-      "bg-[var(--color-accent-muted)] text-[var(--color-accent)] border border-[var(--color-accent)]/20",
+      "bg-accent-muted text-accent border border-accent/20",
     success:
-      "bg-[var(--color-success)]/10 text-[var(--color-success)] border border-[var(--color-success)]/20",
+      "bg-success/10 text-success border border-success/20",
     warning:
-      "bg-[var(--color-warning)]/10 text-[var(--color-warning)] border border-[var(--color-warning)]/20",
+      "bg-warning/10 text-warning border border-warning/20",
     error:
-      "bg-[var(--color-error)]/10 text-[var(--color-error)] border border-[var(--color-error)]/20",
+      "bg-error/10 text-error border border-error/20",
     subtle:
-      "bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)]",
+      "bg-bg-tertiary text-text-secondary border border-border",
   };
 
   return (

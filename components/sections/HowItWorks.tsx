@@ -28,15 +28,15 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="bg-[var(--color-bg-secondary)] py-20 md:py-28">
+    <section className="bg-bg-secondary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             {/* [CHANGE] Section label */}
             How it works
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] Headline */}
@@ -50,21 +50,21 @@ export function HowItWorks() {
             return (
               <div key={step.step} className="flex flex-col">
                 <div className="mb-4 flex items-center gap-3">
-                  <span className="font-heading text-4xl font-semibold text-[var(--color-border-strong)]">
+                  <span className="font-heading text-4xl font-semibold text-border-strong">
                     {step.step}
                   </span>
-                  <div className="h-px flex-1 bg-[var(--color-border)]" />
+                  <div className="h-px flex-1 bg-border" />
                 </div>
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent-muted)]">
-                  <Icon className="h-5 w-5 text-[var(--color-accent)]" />
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-muted">
+                  <Icon className="h-5 w-5 text-accent" />
                 </div>
                 <h3
-                  className="font-heading text-lg font-semibold text-[var(--color-text-primary)]"
+                  className="font-heading text-lg font-semibold text-text-primary"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                   {step.description}
                 </p>
               </div>

@@ -10,17 +10,17 @@ export const metadata: Metadata = createMetadata({
 
 export default function ContactPage() {
   return (
-    <section className="bg-[var(--color-bg-primary)] py-20 md:py-28">
+    <section className="bg-bg-primary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-xl">
           <h1
-            className="font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] */}
             Get in touch
           </h1>
-          <p className="mt-3 text-[var(--color-text-secondary)]">
+          <p className="mt-3 text-text-secondary">
             {/* [CHANGE] */}
             Have a question or want to collaborate? Send us a message and
             we&apos;ll reply within 24 hours.
@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-[var(--color-text-primary)]"
+                className="block text-sm font-medium text-text-primary"
               >
                 Name
               </label>
@@ -41,14 +41,14 @@ export default function ContactPage() {
                 type="text"
                 required
                 autoComplete="name"
-                className="mt-1.5 block w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                className="mt-1.5 block w-full rounded-lg border border-border bg-bg-secondary px-4 py-2.5 text-sm text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 placeholder="Your name"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-[var(--color-text-primary)]"
+                className="block text-sm font-medium text-text-primary"
               >
                 Email
               </label>
@@ -58,14 +58,14 @@ export default function ContactPage() {
                 type="email"
                 required
                 autoComplete="email"
-                className="mt-1.5 block w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                className="mt-1.5 block w-full rounded-lg border border-border bg-bg-secondary px-4 py-2.5 text-sm text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 placeholder="you@example.com"
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-[var(--color-text-primary)]"
+                className="block text-sm font-medium text-text-primary"
               >
                 Message
               </label>
@@ -74,13 +74,13 @@ export default function ContactPage() {
                 name="message"
                 rows={5}
                 required
-                className="mt-1.5 block w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                className="mt-1.5 block w-full rounded-lg border border-border bg-bg-secondary px-4 py-2.5 text-sm text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 placeholder="What's on your mind?"
               />
             </div>
             <button
               type="submit"
-              className="w-full rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent-hover)]"
+              className="w-full rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
             >
               Send message
             </button>

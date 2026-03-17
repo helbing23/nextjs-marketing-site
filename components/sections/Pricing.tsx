@@ -59,19 +59,19 @@ const TIERS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-[var(--color-bg-primary)] py-20 md:py-28">
+    <section id="pricing" className="bg-bg-primary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Pricing
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Simple, honest pricing
           </h2>
-          <p className="mt-4 text-pretty text-[var(--color-text-secondary)]">
+          <p className="mt-4 text-pretty text-text-secondary">
             {/* [CHANGE] Pricing description */}
             No seat fees, no hidden limits. Pay once, use forever.
           </p>
@@ -84,13 +84,13 @@ export function Pricing() {
               className={cn(
                 "flex flex-col rounded-2xl border p-8",
                 tier.featured
-                  ? "border-[var(--color-accent)]/60 bg-[var(--color-bg-secondary)] shadow-lg shadow-[var(--color-accent)]/10 ring-1 ring-[var(--color-accent)]/20"
-                  : "border-[var(--color-border)] bg-[var(--color-bg-secondary)]"
+                  ? "border-accent/60 bg-bg-secondary shadow-lg shadow-accent/10 ring-1 ring-accent/20"
+                  : "border-border bg-bg-secondary"
               )}
             >
               {tier.featured && (
                 <div className="mb-4 -mt-2 flex justify-center">
-                  <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-semibold text-white">
+                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
                     Most Popular
                   </span>
                 </div>
@@ -98,24 +98,24 @@ export function Pricing() {
 
               <div>
                 <h3
-                  className="font-heading text-lg font-semibold text-[var(--color-text-primary)]"
+                  className="font-heading text-lg font-semibold text-text-primary"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {tier.name}
                 </h3>
-                <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                <p className="mt-1 text-sm text-text-secondary">
                   {tier.description}
                 </p>
               </div>
 
               <div className="mt-6 flex items-end gap-1">
                 <span
-                  className="font-heading text-4xl font-semibold text-[var(--color-text-primary)]"
+                  className="font-heading text-4xl font-semibold text-text-primary"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {tier.price}
                 </span>
-                <span className="mb-1 text-sm text-[var(--color-text-tertiary)]">
+                <span className="mb-1 text-sm text-text-tertiary">
                   / {tier.period}
                 </span>
               </div>
@@ -125,8 +125,8 @@ export function Pricing() {
                 className={cn(
                   "mt-6 block w-full rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-colors",
                   tier.featured
-                    ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)]"
-                    : "border border-[var(--color-border)] bg-transparent text-[var(--color-text-primary)] hover:border-[var(--color-border-strong)] hover:bg-[var(--color-bg-tertiary)]"
+                    ? "bg-accent text-white hover:bg-accent-hover"
+                    : "border border-border bg-transparent text-text-primary hover:border-border-strong hover:bg-bg-tertiary"
                 )}
               >
                 {tier.cta}
@@ -135,8 +135,8 @@ export function Pricing() {
               <ul className="mt-8 space-y-3">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-success)]" />
-                    <span className="text-sm text-[var(--color-text-secondary)]">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                    <span className="text-sm text-text-secondary">
                       {feature}
                     </span>
                   </li>

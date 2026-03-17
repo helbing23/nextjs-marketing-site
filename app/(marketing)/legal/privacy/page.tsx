@@ -11,16 +11,17 @@ export const metadata: Metadata = createMetadata({
 
 export default function PrivacyPage() {
   return (
-    <section className="bg-[var(--color-bg-primary)] py-20">
+    <section className="bg-bg-primary py-20">
       <Container>
         <div className="prose prose-invert mx-auto max-w-2xl">
-          <h1 className="font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]">
+          <h1 className="font-heading text-h2 font-semibold text-text-primary">
             Privacy Policy
           </h1>
-          <p className="text-[var(--color-text-tertiary)]">
-            Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          <p className="text-text-tertiary">
+            {/* [CHANGE] Update this date when you publish your real policy */}
+            Last updated: January 1, 2026
           </p>
-          <div className="mt-8 space-y-6 text-[var(--color-text-secondary)]">
+          <div className="mt-8 space-y-6 text-text-secondary">
             <p>
               {/* [CHANGE] Replace with real privacy policy */}
               This is a placeholder privacy policy. Replace with your actual

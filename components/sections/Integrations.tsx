@@ -26,10 +26,10 @@ const INTEGRATIONS_ROW_2 = [
 
 function IntegrationCard({ name }: { name: string }) {
   return (
-    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-2.5">
+    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-border bg-bg-secondary px-4 py-2.5">
       {/* [CHANGE] Replace with next/image logo */}
-      <div className="h-4 w-4 rounded bg-[var(--color-accent-muted)]" />
-      <span className="whitespace-nowrap text-sm font-medium text-[var(--color-text-secondary)]">
+      <div className="h-4 w-4 rounded bg-accent-muted" />
+      <span className="whitespace-nowrap text-sm font-medium text-text-secondary">
         {name}
       </span>
     </div>
@@ -38,14 +38,14 @@ function IntegrationCard({ name }: { name: string }) {
 
 export function Integrations() {
   return (
-    <section className="bg-[var(--color-bg-secondary)] py-20 md:py-28">
+    <section className="bg-bg-secondary py-20 md:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Integrations
           </p>
           <h2
-            className="mt-3 text-balance font-heading text-[var(--text-h2)] font-semibold text-[var(--color-text-primary)]"
+            className="mt-3 text-balance font-heading text-h2 font-semibold text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] Headline */}

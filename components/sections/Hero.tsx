@@ -5,13 +5,13 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-bg-primary)] py-20 md:py-32">
+    <section className="relative overflow-hidden bg-bg-primary py-20 md:py-32">
       {/* Dot grid background */}
       <div className="dot-grid absolute inset-0 opacity-40" aria-hidden="true" />
 
       {/* Radial glow */}
       <div
-        className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/4 rounded-full bg-[var(--color-accent)] opacity-[0.08] blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/4 rounded-full bg-accent opacity-[0.08] blur-3xl"
         aria-hidden="true"
       />
 
@@ -27,19 +27,19 @@ export function Hero() {
 
           {/* Headline */}
           <h1
-            className="font-heading text-balance text-[var(--text-display)] font-semibold leading-tight tracking-tight text-[var(--color-text-primary)]"
+            className="font-heading text-balance text-display font-semibold leading-tight tracking-tight text-text-primary"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {/* [CHANGE] Your main headline goes here */}
             The fastest way to{" "}
-            <span className="text-[var(--color-accent)]">
+            <span className="text-accent">
               build and ship
             </span>{" "}
             your next product
           </h1>
 
           {/* Subheadline */}
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-[var(--text-body-lg)] text-[var(--color-text-secondary)]">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-body-lg text-text-secondary">
             {/* [CHANGE] 1-2 sentence description of your product's value prop */}
             A production-ready Next.js 15 marketing site template with a complete
             design system, all components pre-built, and ready to deploy in
@@ -50,7 +50,7 @@ export function Hero() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/#pricing"
-              className="group flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-accent)]/20 transition-all hover:bg-[var(--color-accent-hover)] hover:shadow-[var(--color-accent)]/30"
+              className="group flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/20 transition-all hover:bg-accent-hover hover:shadow-accent/30"
             >
               {/* [CHANGE] Primary CTA text */}
               Get started free
@@ -58,7 +58,7 @@ export function Hero() {
             </Link>
             <Link
               href="/blog"
-              className="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-6 py-3 text-sm font-semibold text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-bg-tertiary)]"
+              className="flex items-center gap-2 rounded-lg border border-border bg-bg-secondary px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-border-strong hover:bg-bg-tertiary"
             >
               {/* [CHANGE] Secondary CTA text */}
               See how it works
@@ -71,7 +71,7 @@ export function Hero() {
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
-                  className="h-7 w-7 rounded-full border-2 border-[var(--color-bg-primary)]"
+                  className="h-7 w-7 rounded-full border-2 border-bg-primary"
                   style={{
                     background: `hsl(${(i * 60 + 270) % 360}, 60%, 55%)`,
                   }}
@@ -79,8 +79,8 @@ export function Hero() {
                 />
               ))}
             </div>
-            <p className="text-sm text-[var(--color-text-secondary)]">
-              <span className="font-semibold text-[var(--color-text-primary)]">
+            <p className="text-sm text-text-secondary">
+              <span className="font-semibold text-text-primary">
                 {/* [CHANGE] Real number */}
                 1,000+
               </span>{" "}
@@ -91,39 +91,39 @@ export function Hero() {
 
         {/* Hero mockup / graphic */}
         <div className="relative mx-auto mt-16 max-w-3xl">
-          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-1 shadow-2xl shadow-black/40">
+          <div className="rounded-xl border border-border bg-bg-secondary p-1 shadow-2xl shadow-black/40">
             {/* Fake browser chrome */}
-            <div className="flex items-center gap-1.5 rounded-t-lg border-b border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-4 py-3">
+            <div className="flex items-center gap-1.5 rounded-t-lg border-b border-border bg-bg-tertiary px-4 py-3">
               <div className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
               <div className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
               <div className="h-2.5 w-2.5 rounded-full bg-[#28CA41]" />
-              <div className="mx-auto flex h-6 w-56 items-center rounded bg-[var(--color-bg-primary)] px-3">
-                <span className="text-xs text-[var(--color-text-tertiary)]">
+              <div className="mx-auto flex h-6 w-56 items-center rounded bg-bg-primary px-3">
+                <span className="text-xs text-text-tertiary">
                   yoursite.com
                 </span>
               </div>
             </div>
             {/* [CHANGE] Replace with a screenshot of your actual product/site */}
-            <div className="flex h-64 items-center justify-center rounded-b-lg bg-gradient-to-br from-[var(--color-bg-secondary)] to-[var(--color-bg-tertiary)]">
-              <p className="text-sm text-[var(--color-text-tertiary)]">
+            <div className="flex h-64 items-center justify-center rounded-b-lg bg-linear-to-br from-bg-secondary to-bg-tertiary">
+              <p className="text-sm text-text-tertiary">
                 [CHANGE] Add a product screenshot here
               </p>
             </div>
           </div>
 
           {/* Floating accent cards */}
-          <div className="absolute -left-4 top-1/4 hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-3 shadow-lg lg:block">
+          <div className="absolute -left-4 top-1/4 hidden rounded-lg border border-border bg-bg-secondary p-3 shadow-lg lg:block">
             <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-[var(--color-success)]" />
-              <span className="text-xs font-medium text-[var(--color-text-primary)]">
+              <div className="h-2 w-2 rounded-full bg-success" />
+              <span className="text-xs font-medium text-text-primary">
                 Deploy successful
               </span>
             </div>
           </div>
-          <div className="absolute -right-4 bottom-1/4 hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-3 shadow-lg lg:block">
+          <div className="absolute -right-4 bottom-1/4 hidden rounded-lg border border-border bg-bg-secondary p-3 shadow-lg lg:block">
             <div className="flex items-center gap-2">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--color-accent)]" />
-              <span className="text-xs font-medium text-[var(--color-text-primary)]">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+              <span className="text-xs font-medium text-text-primary">
                 100 Lighthouse score
               </span>
             </div>
